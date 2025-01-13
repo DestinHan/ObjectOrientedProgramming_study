@@ -1,0 +1,6 @@
+객체 objects
+변수 variables
+Left-values와 Right-values
+초기화(initialization)와 대입assignment
+초기화를 안 했을 떄의 문제점
+

@@ -1,0 +1,7 @@
+char a = 'H';
+	a의 주소는 임의로 9960008 (1byte)
+int i = 1;
+	i의 주소는 임의로 9960015 (4byte)
+
+float 4byte
+double 8 byte

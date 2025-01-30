@@ -1,14 +1,22 @@
-//
-//  main.cpp
-//  scopedEnumerations
-//
-//  Created by 한승훈 on 1/30/25.
-//
-
 #include <iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+enum class Color {
+    RED,
+    BLUE
+};
+
+enum class Fruit {
+    BANANA,
+    APPLE,
+};
+
+int main(void) {
+    
+    using namespace std;
+    
+    Color color = Color::RED;
+    Fruit fruit = Fruit::BANANA;
+    
+    
     return 0;
 }

@@ -5,7 +5,7 @@
 enum Type {
     
     INT,
-    FLOAT,
+    FLOAT,      // 1
     CHAR,
     
 };

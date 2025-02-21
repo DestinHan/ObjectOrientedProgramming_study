@@ -35,5 +35,7 @@ int main() {
     
     A & ref = b;
     ref.print(1);
+    b.print(1);
+    a.print(1);
     
 }

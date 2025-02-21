@@ -17,8 +17,12 @@ public:
         return m_cents;
     }
     
-    friend Cents operator + (const Cents & c1, const Cents & c2){
-        return Cents(c1.getCents() + c2.getCents());
+//    friend Cents operator + (const Cents & c1, const Cents & c2){
+//        return Cents(c1.getCents() + c2.getCents());
+//    };
+    
+    Cents operator + (const Cents & c2){
+        return Cents(this->m_cents + c2.getCents());
     };
     
 };
@@ -39,7 +43,9 @@ int main() {
     Cents cents2(7);
     
 //    cout << add(cents1, cents2).getCents() << endl;
-    cout << (cents1 + cents2 + Cents(6) + Cents(10)).getCents() << endl;
+    cout << (cents1 + cents2 + Cents(6) + Cents(10) + Cents(10)).getCents() << endl;
+    
+    // ?: :: sizeof . .* can't overload
     
     return 0;
 }

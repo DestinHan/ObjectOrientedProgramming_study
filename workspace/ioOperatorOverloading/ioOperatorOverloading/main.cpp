@@ -46,8 +46,9 @@ int main() {
     cin >> p1 >> p2;
     
     cout << p1 << " " << p2 << endl;
-    of << p1 << " " << p2 << endl;
-    of.close();
+    
+//    of << p1 << " " << p2 << endl;
+//    of.close();
     
     return 0;
 }

@@ -39,7 +39,7 @@ int main() {
     
     std::vector<Cents>arr(20);
     
-    for (unsigned i = 0; i<20; ++i) {
+    for (unsigned i = 0u; i<20; ++i) {
         arr[i].getCents() = i;
     }
     

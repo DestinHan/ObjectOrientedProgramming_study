@@ -42,7 +42,10 @@ int main() {
     for (unsigned i = 0u; i<20; ++i) {
         arr[i].getCents() = i;
     }
-
+    
+    for (auto& ele : arr) {
+        cout << ele << endl;
+    }
     
     return 0;
 }

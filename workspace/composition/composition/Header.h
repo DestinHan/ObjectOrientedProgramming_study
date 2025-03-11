@@ -13,7 +13,7 @@ private:
 //    int m_y;
 
 public:
-    Monster(const std::string name, const Position2D & pos_in) : m_name(name), m_location(pos_in) {}
+    Monster(const std::string name_in, const Position2D & pos_in) : m_name(name_in), m_location(pos_in) {}
 
     void moveTo(const Position2D & pos_target) {
         m_location.set(pos_target);

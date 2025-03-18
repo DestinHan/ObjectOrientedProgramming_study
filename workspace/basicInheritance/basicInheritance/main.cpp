@@ -4,7 +4,7 @@ class Mother {
     
 private:      // unaccessible to child class
 //public:
-//protected:
+//protected:    public for child class
     int m_i;
     
 public:
@@ -64,6 +64,7 @@ class Son : public Mother {
 int main() {
     
     using namespace std;
+    
     
     Mother mother(1024);
 //    mother.setValue(;

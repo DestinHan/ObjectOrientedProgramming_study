@@ -24,4 +24,4 @@ public:
     
 };
 
-#endif /* Teacher_h */
+#endif 

@@ -3,7 +3,7 @@
 class A {
     
 public:
-    virtual void print() { std::cout << "A" << std::endl; }
+    virtual void print() { std::cout << "A" << std::endl; }     // if child class has overrided function then uses child class function.
     
 };
 
@@ -17,7 +17,7 @@ public:
 class C : public B {
     
 public:
-    virtual void print() { std::cout << "C" << std::endl; }
+    virtual void print() { std::cout << "C" << std::endl; }             // virtual in A effects in here too but, it's nice to just write virtual also in child class.
     
 };
 
@@ -42,12 +42,16 @@ int main() {
     D d;
     d.print();
     
-    A &ref = b;
+    A & ref = b;
     ref.print();
     
-    A &reff = c;
+    A & reff = c;
     reff.print();
     
-    ref.print();
+    A & refff = d;
+    refff.print();
+    
+    C &reffff = d;
+    reffff.print();
     
 }

@@ -26,7 +26,7 @@ class Cat : public Animal {
 public:
     Cat(std::string name) : Animal(name) {}
     
-    void speak() const {
+    virtual void speak() const override {
         std::cout << m_name << " Meow " << std::endl;
     }
     
@@ -37,7 +37,7 @@ class Dog : public Animal {
 public:
     Dog(std::string name) : Animal(name) {}
     
-    void speak() const {
+    virtual void speak() const override {
         std::cout << m_name << " Woof " << std::endl;
     }
     
@@ -48,7 +48,7 @@ class Cow : public Animal {
 public:
     Cow(std::string name) : Animal(name) {}
     
-    void speak() const {
+    virtual void speak() const override {
         std::cout << m_name << " MOO " << std::endl;
     }
     
@@ -58,7 +58,7 @@ int main() {
     
     using namespace std;
     
-//    Animal ani("Hi");     can't
+//    Animal ani("Hi");     can't,
     
     Cow cow("lazy");
     cow.speak();

@@ -14,7 +14,7 @@ int goo() {
     
 }
 
-bool isEven(const int& number) {
+bool isEven(const int & number) {
     
     if (number % 2 == 0) {
         return true;
@@ -24,7 +24,7 @@ bool isEven(const int& number) {
     }
 }
 
-bool isOdd(const int& number) {
+bool isOdd(const int & number) {
     
     if (number % 2 != 0) {
         return true;
@@ -34,7 +34,7 @@ bool isOdd(const int& number) {
     }
 }
 
-void printNumbers(const std::array<int, 10> &my_array, bool (*check_fcn)(const int&)) {
+void printNumbers(const std::array<int, 10> &my_array, bool (*check_fcn)(const int &)) {
     
     for(auto element : my_array) {
         if (check_fcn(element) == true) {
@@ -51,9 +51,9 @@ int main() {
     
     func();
     
-    int (*fcnptr)() = func;     // function pointer
+    int (*fcnptr)() = func;     // initializing function pointer
     
-    cout << fcnptr() << endl;
+    cout << fcnptr() << endl;   // 5
     
     fcnptr = goo;
     

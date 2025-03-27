@@ -3,7 +3,7 @@
 class Base {
     
 public:
-    virtual ~Base() {
+    virtual ~Base() {                           // virtual destructor to prevent memory leak
         std::cout << "~Base()" << std::endl;
     }
     

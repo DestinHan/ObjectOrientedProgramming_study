@@ -10,14 +10,14 @@ public:
 class B : public A {
     
 public:
-    virtual void print(int x) const override { std::cout << "B" << std::endl; }
+    virtual void print(int x) const override { std::cout << "B" << std::endl; } // if parameter is different, can't override, "override" prevent that
     
 };
 
 class C : public B {
     
 public:
-    virtual void print() final { std::cout << "C" << std::endl; }   // can't overrid in D
+    virtual void print() final { std::cout << "C" << std::endl; }   // can't overrid in D by "final"
     
 };
 
@@ -37,5 +37,6 @@ int main() {
     ref.print(1);
     b.print(1);
     a.print(1);
+    
     
 }

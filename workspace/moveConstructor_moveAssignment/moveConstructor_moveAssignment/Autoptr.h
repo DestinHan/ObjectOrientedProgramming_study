@@ -15,6 +15,8 @@ public:
     
     ~AutoPtr() {
         std::cout << "AutoPtr destructor" << std::endl;
+        
+        if(m_ptr != nullptr) delete m_ptr;
     }
     
     AutoPtr(const AutoPtr& a) {
@@ -29,7 +31,7 @@ public:
         std::cout << "AutoPtr copy assignment" << std::endl;
         
         if(&a == this) {
-            return *this
+            return *this;
         }
         
         if (m_ptr != nullptr) { delete m_ptr; }
@@ -41,6 +43,29 @@ public:
         return *this;
     }
     
-}
+    AutoPtr(AutoPtr && a) : m_ptr(a.m_ptr) {
+        a.m_ptr = nullptr;
+        
+        std::cout << "AutoPtr move constructor" << std::endl;
+    }
+    
+    AutoPtr& operator=(AutoPtr&& a) {
+        std::cout << "AutoPtr move assignment" << std::endl;
+        
+        if (&a == this) { return *this; }
+        
+        if (!m_ptr) { delete m_ptr; }
+        
+        // shallow copy
+        m_ptr = a.m_ptr;
+        a.m_ptr = nullptr;  // really necessary?
+        
+        return *this;
+    }
+    
+    T& operator *() const { return *m_ptr; }
+    T* operator ->() const { return m_ptr; }
+    
+};
 
 #endif

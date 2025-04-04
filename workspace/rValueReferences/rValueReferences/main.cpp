@@ -37,15 +37,19 @@ int main() {
 //    int &&rr2 = cx;   // Non-modifiable l-values
     int &&rr3 = 5;      // R-values
     
+    cout << rr3 << endl;
+    rr3 = 10;
+    cout << rr3 << endl;
+    
 //    const int &&rr4 = x;  // Modifiable l-values
 //    const int &&rr5 = cx; // Non-modifiable l-values
     const int &&rr6 = 5;
     
     // L/R-value reference parameters
-    doSomething(x);
+    doSomething(x);             // L-value
     //doSomething(5);
-    doSomething(5);
-    doSomething(getResult());
+    doSomething(5);             // R-value
+    doSomething(getResult());   // R-value
     
     return 0;
 }

@@ -53,7 +53,7 @@ public:
             m_data[i] = res.m_data[i];
         }
         
-        retunr *this;
+        return *this;
     }
         
     void print() {

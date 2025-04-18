@@ -28,5 +28,10 @@ int main() {
     }
     
     
+    const char* str1 = "Hello";
+    const char str2[] = "Hello";
+    
+    cout << str1 << " " << str2 << endl;
+    
     return 0;
 }
